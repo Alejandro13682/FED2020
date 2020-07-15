@@ -1,0 +1,110 @@
+{
+    "products": [
+        {
+            "_id": "1",
+            "name": "Slim fit jeans",
+            "image": "/images/jean.jpg",
+            "price": 1790,
+            "brand": "Owen",
+            "categoria": "vestimenta",
+            "size1": 30,
+            "size2": 32,
+            "size3": 34,
+            "size4": 36
+        },
+        {
+            "_id": "2",
+            "name": "Camiseta cuello V",
+            "image": "/images/camiseta.jpg",
+            "price": 399,
+            "brand": "Numann",
+            "categoria": "vestimenta",
+            "size1": "S",
+            "size2": "M",
+            "size3": "L",
+            "size4": "XL"
+        },
+        {
+            "_id": "3",
+            "name": "Guantes lana",
+            "image": "/images/guantes.jpg",
+            "categoria": "accesorios",
+            "price": 350,
+            "brand": "Owen"
+        },
+        {
+            "_id": "4",
+            "name": "Sweater crudo",
+            "image": "/images/buzo.jpg",
+            "price": 1490,
+            "brand": "Lean",
+            "categoria": "vestimenta",
+            "size1": "S",
+            "size2": "M",
+            "size3": "L",
+            "size4": "XL"
+        },
+        {
+            "_id": "5",
+            "name": "Bufanda lana",
+            "image": "/images/bufanda.jpg",
+            "price": 60,
+            "brand": "Scott",
+            "categoria": "accesorios"
+        },
+        {
+            "_id": "6",
+            "name": "Correa muneca",
+            "image": "/images/pulsera.jpg",
+            "price": 430,
+            "brand": "TopGun",
+            "categoria": "vestimenta"
+        },
+        {
+            "_id": "7",
+            "name": "Chaqueta pluma",
+            "image": "/images/campera.jpg",
+            "price": 3590,
+            "brand": "Articc",
+            "categoria": "vestimenta",
+            "size1": 30,
+            "size2": 32,
+            "size3": 34,
+            "size4": 36
+        },
+        {
+            "_id": "8",
+            "name": "Bota piel",
+            "image": "/images/botas.jpg",
+            "price": 3290,
+            "brand": "Martins",
+            "categoria": "calzado",
+            "size1": 40,
+            "size2": 42,
+            "size3": 44,
+            "size4": 46
+        },
+        {
+            "_id": "9",
+            "name": "Zapatilla F777",
+            "image": "/images/championes.jpg",
+            "price": 3590,
+            "brand": "New Balance",
+            "categoria": "calzado",
+            "size1": 38,
+            "size2": 39,
+            "size3": 41,
+            "size4": 43
+        }
+    ],
+    
+        "portada": [
+            {
+            "image": "/images/championesPortada.jpg"
+            }
+        ]
+}
+
+
+
+

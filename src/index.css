@@ -1,0 +1,749 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 17px;
+}
+
+.grid-container {
+  display: grid;
+  width: 100%;                           
+            grid-template-columns: 10em 1fr 10em;
+            grid-template-rows: 7em 1fr 5em;
+            grid-template-areas: "head head head"                               
+                                 "main  main  main"                                 
+                                 "foot foot foot";
+}
+
+header {
+  grid-area: head; 
+  background: #212721;
+  display: grid;
+  grid-template-columns: 20em 1fr 20em;
+  grid-template-areas: "logo nav bot";
+  color: white;
+}
+
+.logo{
+  grid-area: logo;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo div{
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo div img{
+  width: 100%;
+}
+
+nav{
+  grid-area: nav;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+header ul {
+  list-style-type: none;
+}
+
+header ul li{
+  display: inline;
+  margin: 1em;
+  padding: 0.5em 0.5em;
+}
+
+header ul li a{
+  text-decoration: none;
+  color: white;
+}
+
+.botones{
+  grid-area: bot;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.botones span{
+  font-size: 0.7em;
+  border: 1px solid white;
+  width: 4rem;
+  padding: 5px 5px;
+  margin: 0.5em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+footer{
+  grid-area: foot;
+  display: flex;
+ 
+  align-items: center;
+  background: #212721;
+  color: white;  
+}
+
+.mediosPago{
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.mediosPago > div{
+  height: 3em;
+  width: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mediosPago > div img{
+  width: 100%;
+}
+/*------Estilos inicio------*/
+
+.pag-inicio{
+  grid-area: main; 
+  display: grid;
+  grid-template-rows: auto auto auto auto 20em;
+  grid-template-areas: "portada"
+                        "dest"
+                        "pop"
+                       "promo";
+  min-height: 100%; 
+  
+}
+.portada {   
+  grid-area: portada;  
+}
+
+.slider{
+  box-sizing: border-box;
+  display: flex;  
+  align-items: center;  
+  max-height: 100vh;  
+  overflow: hidden;
+}
+.slider img{
+  width: 100%;
+}
+.slide{  
+  min-width: 100%;
+  max-height: 100%;
+  transition: .5s;
+  overflow: hidden;
+}
+
+#btn-izq{
+  position: absolute;  
+  margin-top: auto; 
+  width: 10%;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+}
+#btn-der{
+  position: absolute;  
+  margin-top: auto; 
+  width: 10%;
+  height: 100%;
+  right: 0;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+#btn-izq:hover{
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+#btn-der:hover{
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.destacados {
+  box-sizing: border-box; 
+  grid-area: dest;   
+  display: flex;
+ flex-direction: column; 
+}
+
+.destacados img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.info-dest{
+  width: 75%;  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+}
+
+.destacados:hover{
+  background: ghostwhite;
+}
+
+.titulo-dest{  
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.texto-dest{
+  height: 80%; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4em;
+}
+
+.promo1 {
+  padding: 1em;
+  height: 30em;  
+  display: flex;
+  justify-content: space-between;
+}
+
+.promo1 > div{
+  height: 100%;  
+  display: flex;
+  justify-content: center;
+}
+.promo2{
+  padding: 1em;
+  height: 30em; 
+  display: flex;
+  justify-content: space-between;
+}
+
+.promo2 > div{
+  height: 100%;  
+  display: flex;
+  justify-content: center;
+}
+
+.linksCatalogo {  
+  grid-area: pop;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: purple; 
+}
+
+.promociones { 
+  grid-area: promo;  
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  background: slateblue;  
+}
+
+/*------fin estilos inicio------*/
+
+/*-----Estilos tienda----*/
+
+.tienda{
+  grid-area: main;   
+  display: grid;
+  grid-template-columns: 10em 1fr 10em;
+  grid-template-rows: 3em 1fr;
+  grid-template-areas: "tit  tit  tit"
+                       "filt cat aside";
+}
+
+.titulotienda {
+  margin-top: 1em;
+  grid-area: tit;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.filtros{
+  grid-area: filt;  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1em;
+}
+.filtros span{
+  background: black;
+  color: white;
+  width: 100%;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filtros ul{
+  list-style-type: none; 
+  width: 100%;  
+  
+}
+
+.filtros ul li{
+  padding: 5px 5px;
+  display: block;
+  cursor: pointer;
+}
+
+.filtros ul li:hover{
+  background: black;
+  color: white;
+}
+
+.catalogo{
+  grid-area: cat;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;  
+}
+
+.tarjeta-producto {  
+  box-sizing: border-box;   
+  display: grid;
+  grid-template-rows: 80% 20%;
+  grid-template-areas: "fot"
+                       "det";
+  background: whitesmoke;  
+  height: 450px;
+  width: 300px; 
+  margin: 1em;
+}
+.tarjeta-imagen {   
+  grid-area: fot; 
+  height: 100%;
+   display: flex;
+   align-items: center;
+ }
+ .tarjeta-imagen > img {
+   width: 100%; 
+   max-height: 100%; 
+ }
+ 
+ .detalles-producto{
+   grid-area: det;
+   color: whitesmoke;   
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   background: #212721;
+   padding: 0.5em;
+ }
+
+ .detalles-producto a{
+   text-decoration: none;
+   color:  whitesmoke;
+ }
+
+ .agregar-carrito{
+  
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .agregar-carrito span{  
+  border: 1px solid white;
+  padding: 5px 5px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+aside{
+  grid-area: aside;  
+}
+
+/*---Fin estilos tienda----*/
+.volverListado{
+  grid-column: span 3; 
+  padding: 1em;
+}
+.volverListado span a{
+  text-decoration: none;
+}
+
+.detallesProducto{
+  grid-area: main;  
+}
+
+.descripcion{
+  width: 80%;  
+  margin: auto; 
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: repeat(2, 1fr);  
+}
+
+.fotosProd{  
+  grid-row: span 1;
+  display: grid;
+  grid-template-columns: auto 1fr;  
+}
+
+.mini{
+  grid-row: span 1;  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 1em;  
+}
+
+.foto{
+  grid-row: span 1;  
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.foto img{
+  width: 100%;
+  max-height: 100%;
+}
+
+.compra{
+  grid-row: span 1;
+  padding: 1em;  
+}
+.contenedorDetalles{ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 8em;
+  margin: 1em;
+}
+.nombre{
+  font-size: 1.5em;
+}
+.marca {
+  font-size: 1em;
+}
+
+.contenedorCompra{ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 10em;
+  margin: 1em;
+}
+
+.talles{
+  font-size: 1.5rem;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;  
+}
+.talles span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5em;
+  width: 1.5em;  
+  font-size: 1rem;
+  color: black;
+  border: 4px solid black;
+  margin: 0.3em;
+}
+.botFav-botComp{  
+  display: flex;
+  align-items: center;
+  height: 3em;
+  margin: 1em;
+}
+.botFav-botComp span{
+  background: black;
+  color: white;
+  height: 1em;
+  margin-right: 1em;
+  padding: 0.5em;
+}
+
+.sugerencias{  
+  padding: 1em;  
+  height: 20em;
+  grid-column: span 2;
+  display: grid;
+  grid-template-rows: 3em 1fr; 
+}
+.sugerencias span{
+  grid-column: span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fav{
+  grid-column: span s1; 
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.fav > div{  
+  height: 15em;
+  width: 12em;
+  display: flex;
+  align-items: center;
+}
+.fav div img{
+  width: 100%;
+  max-height: 100%;
+}
+
+@media (max-width: 1200px){
+  header {
+    grid-area: head; 
+    background: #454545;
+    display: grid;
+    grid-template-columns: 10em 1fr;
+    grid-template-areas: "logo", "nav";
+    color: white;
+  }
+  .logo{
+    grid-area: logo;
+  }
+
+  nav{
+    grid-area: nav;
+  }
+  .filtros ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .filtros ul li{
+    display: inline;
+    margin: 1em
+  }
+
+  .botones{
+    display: none;
+  }
+
+  .tienda{
+    grid-area: main;   
+    display: grid;
+    grid-template-columns: 5em 1fr 5em;
+    grid-template-rows: 3em 1fr;
+    grid-template-areas: "tit  tit  tit"
+                          "filt filt filt"
+                         "cat cat cat";
+  }
+
+ 
+  .titulotienda {
+    grid-area: tit;  
+  }
+  aside{
+    display: none;
+  }
+ 
+  .descripcion{    
+    width: 100%;     
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3em auto auto auto;
+    grid-template-areas: "link"
+                         "fotos"
+                         'compra'
+                         "sug";
+  }
+  .volverListado{
+    grid-column: link; 
+    padding: 1em;
+  }
+
+  .fotosProd{    
+    grid-area: fotos;
+      
+  }
+  .compra{
+    grid-area: compra;
+    background: white;
+    padding: 0px;
+  }
+  .sugerencias{  
+    padding: 0px;
+    grid-area: sug;     
+    display: grid;
+    grid-template-rows: 3em 1fr; 
+  }
+  .sugerencias span{
+    grid-column: span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .fav{
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .fav > div{  
+    height: 15em;
+    width: 12em;
+    display: flex;
+    align-items: center;
+  }
+  .fav div img{
+    width: 100%;
+    max-height: 100%;
+  }
+
+}
+
+@media (max-width: 450px){
+   header {
+    grid-area: head; 
+    background: #454545;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "logo" "nav";
+    color: white;
+  }
+
+  nav{
+    grid-area: nav;
+  }
+
+  nav ul li{
+   margin: 5px;
+  }
+
+  .botones{
+    display: none;
+  }
+
+  .tienda{    
+    grid-area: main;   
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3em 4em auto;
+    grid-template-areas: "tit",
+                          "filt",
+                         "cat";
+}
+
+.titulotienda {
+  grid-area: tit;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+.filtros{
+  grid-area: filt;  
+  display: flex;  
+  padding: 0px;
+  font-size: 12px;
+}
+.filtros span{
+  background: black;
+  color: white;
+  width: 100%;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filtros ul{
+  list-style-type: none; 
+  width: 100%;  
+  
+}
+
+.filtros ul li{
+  padding: 3px; 
+  cursor: pointer;
+  margin: 0px;
+}
+
+  aside{
+    display: none;
+  }
+
+  .descripcion{  
+    width: 100%; 
+    display: grid;
+   background: blueviolet;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3em 70vh auto auto;
+    /*grid-template-areas: "link"
+                         "fotos"
+                         'compra'
+                         "sug";*/
+  }
+  .volverListado{
+    grid-column: link; 
+    padding: 1em;
+  }
+
+  .fotosProd{    
+    grid-area: fotos;      
+  }
+  .fotosProd img{
+    width: 100%;
+  }
+  .compra{
+    grid-area: compra;
+    background: white;
+    padding: 0px;
+  }
+  .sugerencias{  
+    padding: 0px;
+    grid-area: sug;     
+    display: grid;
+    grid-template-rows: 3em 1fr; 
+  }
+  .sugerencias span{
+    grid-column: span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .fav{
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .fav > div{  
+    height: 15em;
+    width: 12em;
+    display: flex;
+    align-items: center;
+  }
+  .fav div img{
+    width: 100%;
+    max-height: 100%;
+  }
+
+  
+}
+
